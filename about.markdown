@@ -4,15 +4,9 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Hello I'm Bijan and thanks for visiting my blog!
+I'm interested in computers and how stuff actually work , so I made this blog to post and share usefull things I see and learn.
+I got my CEH back in 2019 and that was where I found my self missing alot of things , so I started learning about web application security , and actually starting pentesting.
+And during all these times there were alot of people helping me out by blog posts and videos so I decided to give back to community and help others as much as I can. And I hope my posts come usefull to everyone.
+Thank you again and stay positive !
+You can contact me via twitter and github (links down below) and feel free to ask questions.
