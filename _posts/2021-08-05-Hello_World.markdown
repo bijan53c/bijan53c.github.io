@@ -6,4 +6,4 @@ categories: blog-news
 ---
 <div dir="rtl">
 
-تست میکنم.
+نور ، صدا ، دوربین ، حرکت!
