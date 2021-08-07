@@ -4,3 +4,4 @@
 
 layout: home
 ---
+<div dir="rtl">
