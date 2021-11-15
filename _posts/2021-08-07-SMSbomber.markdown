@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SMSbombers!WTF!
+title: What is a SMS bomber
 category: Programming
 ---
 
