@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hack the box : labs-startingpoint : Meow
-category: CTF-walkthrough
+category: CTF
 ---
 
 Hello everone , today in this post I'm showing you how to get started in Hack the box by completing the starting point:Meow. After signing up there will be a little tour around the dashboard and the UI
