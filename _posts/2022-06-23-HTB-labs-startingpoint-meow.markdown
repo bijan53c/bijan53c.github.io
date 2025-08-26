@@ -16,8 +16,6 @@ are on early stages.
 I think if you are on first levels it's best to start from the *labs* , and the starting point. There will be some tasks that help you understand how to learn and use information
 on the Internet to learn new stuff. These tasks are really easy you just need to learn. And in here I explain stuff more , so you understand what you are doing and why. Let's get into it.
 
-------------------------
-
 ## First
 You need to connect to the HackTheBox. What does that mean? There is a VPN file special for you only. you download and use openvpn to connect. After connecting , you will be
 in the hack the box network. This helps you to get connections to the machines (The computers that are designed for you to hack and do the CTF). So depending on you OS,
