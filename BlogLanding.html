@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0a0b0a;
+    --panel: #101211;
+    --border: #262a26;
+    --text: #e7e9e3;
+    --muted: #8b9088;
+    --accent: #4da3ff;
+    --accent-dim: #2f6cb0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+    overflow-x: hidden;
+  }
+
+  h1, .display {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- BANNER ---------- */
+  .banner {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #10151c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .banner-bg {
+    position: absolute;
+    inset: -20px; /* slightly oversized so the blur doesn't reveal edges */
+    background: url('Assets/Banners/BlogBanner.png') center/cover no-repeat;
+    filter: blur(4px); /* ~40% blur strength */
+    z-index: 0;
+  }
+  .banner::before {
+    content: "";
+    position: absolute; inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(10,11,10,0.75) 0%, rgba(10,11,10,0.4) 40%, rgba(10,11,10,0.85) 100%);
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem 1.5rem;
+    max-width: 700px;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+  .eyebrow::before { content: "_"; }
+  .banner-content h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    margin-bottom: 1.25rem;
+  }
+  .banner-content h1 .accent-line { color: var(--accent); display: block; }
+  .banner-content p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /* ---------- BUTTONS ---------- */
+  .btn-left, .btn-right {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+  }
+  .btn-left {
+    left: 25%;
+    transform: translate(-50%, -50%);
+  }
+  .btn-right {
+    left: 75%;
+    transform: translate(-50%, -50%);
+  }
+
+  .banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.7rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-fill {
+    background: var(--accent);
+    color: #0a0b0a;
+    font-weight: 700;
+  }
+  .btn-fill:hover { background: #6fb6ff; }
+  .btn-line {
+    border: 1px solid var(--border);
+    background: rgba(10,11,10,0.55);
+    backdrop-filter: blur(3px);
+  }
+  .btn-line:hover { border-color: var(--accent-dim); color: var(--accent); }
+
+  @media (max-width: 860px) {
+    .btn-left, .btn-right {
+      position: static;
+      transform: none;
+    }
+    .banner-content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      align-items: center;
+    }
+  }
+
+  /* ---------- HOVER TOOLTIP ---------- */
+  #tooltip {
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 50;
+    background: var(--panel);
+    border: 1px solid var(--accent-dim);
+    color: var(--text);
+    font-size: 0.78rem;
+    line-height: 1.5;
+    padding: 0.7rem 0.95rem;
+    max-width: 220px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.12s ease;
+  }
+  #tooltip.visible { opacity: 1; }
+  #tooltip::before {
+    content: "&gt;_";
+    color: var(--accent);
+    margin-right: 0.4rem;
+  }
+
+  @media (max-width: 860px) {
+    #tooltip { display: none; } /* no hover on touch devices */
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">
+  <div class="banner-bg"></div>
+  <div class="banner-content">
+    <h1>
+      You can choose<br>
+      <span class="accent-line">YOUR NEXT MOVE.</span>
+    </h1>
+    <p>Explore the write-ups, dig into the tools, or see what's currently being built.</p>
+    <p>Read from dev.to posts or raw .md file backups repository.</p>
+  </div>
+
+  <div class="btn-left">
+    <a href="https://github.com/" target="_blank" rel="noopener"
+       class="banner-btn btn-line"
+       data-tip="Browse on github repository and markdown files. ^Easy direct access^">
+      Github →
+    </a>
+  </div>
+
+  <div class="btn-right">
+    <a href="blog-index.html"
+       class="banner-btn btn-fill"
+       data-tip="You can read posts in categories and style here.^More of an actual blog for now^">
+      Dev.to →
+    </a>
+  </div>
+</div>
+
+<div id="tooltip"></div>
+
+<script>
+  const tooltip = document.getElementById("tooltip");
+  const hoverButtons = document.querySelectorAll("[data-tip]");
+  const OFFSET_X = 18;
+  const OFFSET_Y = 18;
+
+  hoverButtons.forEach(btn => {
+    btn.addEventListener("mouseenter", () => {
+      tooltip.textContent = btn.dataset.tip;
+      tooltip.classList.add("visible");
+    });
+
+    btn.addEventListener("mousemove", (e) => {
+      let x = e.clientX + OFFSET_X;
+      let y = e.clientY + OFFSET_Y;
+
+      // Keep tooltip on-screen near right/bottom edges
+      const maxX = window.innerWidth - tooltip.offsetWidth - 12;
+      const maxY = window.innerHeight - tooltip.offsetHeight - 12;
+      if (x > maxX) x = e.clientX - tooltip.offsetWidth - OFFSET_X;
+      if (y > maxY) y = e.clientY - tooltip.offsetHeight - OFFSET_Y;
+
+      tooltip.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      tooltip.classList.remove("visible");
+    });
+  });
+</script>
+
+</body>
+</html>
