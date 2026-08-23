@@ -128,6 +128,12 @@
   .btn-line:hover { border-color: var(--accent-dim); color: var(--accent); }
 
   @media (max-width: 860px) {
+    .banner {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 3rem 1.25rem 2.5rem;
+    }
     .btn-left, .btn-right {
       position: static;
       transform: none;
@@ -135,9 +141,46 @@
     .banner-content {
       display: flex;
       flex-direction: column;
-      gap: 1.75rem;
+      gap: 1.25rem;
       align-items: center;
+      padding: 0;
+      margin: 0 auto;
     }
+    .btn-group {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .banner-content {
+      gap: 1rem;
+    }
+    .banner-content h1 {
+      font-size: clamp(1.5rem, 7vw, 1.9rem);
+      margin-bottom: 0.6rem;
+    }
+    .banner-content p {
+      font-size: 0.82rem;
+      line-height: 1.65;
+    }
+    .banner-btn {
+      width: 100%;
+      justify-content: center;
+      padding: 0.85rem 1.3rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .banner-content h1 { font-size: clamp(1.35rem, 8vw, 1.65rem); }
+    .banner-content p { font-size: 0.78rem; }
+    .banner-btn { padding: 0.75rem 1.1rem; font-size: 0.76rem; }
   }
 
   /* ---------- HOVER TOOLTIP ---------- */
@@ -181,20 +224,22 @@
     <p>Read from dev.to posts or raw .md file backups repository.</p>
   </div>
 
-  <div class="btn-left">
-    <a href="https://github.com/bijan53c/bijan53c.github.io/tree/main/posts" target="_blank" rel="noopener"
-       class="banner-btn btn-line"
-       data-tip="Browse on github repository and markdown files. ^Easy direct access^">
-      Github →
-    </a>
-  </div>
+  <div class="btn-group">
+    <div class="btn-left">
+      <a href="https://github.com/bijan53c/bijan53c.github.io/tree/main/posts" target="_blank" rel="noopener"
+         class="banner-btn btn-line"
+         data-tip="Browse on github repository and markdown files. ^Easy direct access^">
+        Github →
+      </a>
+    </div>
 
-  <div class="btn-right">
-    <a href="https://dev.to/bijan53c"
-       class="banner-btn btn-fill"
-       data-tip="You can read posts in categories and style here.^More of an actual blog for now^">
-      Dev.to →
-    </a>
+    <div class="btn-right">
+      <a href="https://dev.to/bijan53c"
+         class="banner-btn btn-fill"
+         data-tip="You can read posts in categories and style here.^More of an actual blog for now^">
+        Dev.to →
+      </a>
+    </div>
   </div>
 </div>
 
