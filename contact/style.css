@@ -95,7 +95,7 @@ button{ font-family:inherit; }
   padding-bottom:4px;
 }
 .main-nav a:hover{ color:var(--white); }
-.main-nav a.active{ color:var(--blue-bright); }
+.main-nav a.active{ color:var(--white); }
 .main-nav a.active::after{
   content:""; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--blue-bright);
 }
@@ -112,6 +112,20 @@ button{ font-family:inherit; }
   white-space:nowrap;
 }
 .btn-outline:hover{ border-color:var(--blue-bright); background:rgba(59,107,240,0.08); }
+
+.btn-outline.header-contact{
+  border:none;
+  border-bottom:2px solid var(--blue-bright);
+  border-radius:0;
+  background:transparent;
+  color:var(--white);
+  padding:9px 2px 7px;
+}
+.btn-outline.header-contact:hover{
+  background:transparent;
+  color:var(--blue-bright);
+  border-bottom-color:var(--blue-bright);
+}
 .btn-icon{
   border:1px solid var(--line);
   background:transparent;
@@ -440,7 +454,7 @@ main{
   }
   .item-eyebrow{ order:1; }
   .item-headline{ order:2; }
-  .item-cta{ order:3; }
+  .item-cta{ order:3; align-self:center; }
   .item-lead{ order:4; text-align:left; align-self:stretch; margin-left:auto; margin-right:auto; }
   .item-availability{ order:5; align-self:stretch; }
   .item-terminal{ order:6; align-self:stretch; text-align:left; }
