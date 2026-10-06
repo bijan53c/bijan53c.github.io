@@ -1,4 +1,4 @@
-![[A bug that led to infinite likes on video sharing platform.png]]
+![InfiniteLikes](https://github.com/bijan53c/bijan53c.github.io/blob/main/Articles/Attachments/A%20bug%20that%20led%20to%20infinite%20likes%20on%20video%20sharing%20platform.png)
 
 >Posted on Jun 15 • Edited on Jun 27
 
