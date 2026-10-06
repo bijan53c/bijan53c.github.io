@@ -1,6 +1,4 @@
-![[[403 bypass scenarios.png](https://github.com/bijan53c/bijan53c.github.io/blob/main/Articles/Attachments/403%20bypass%20scenarios.png)]]
-
-![alt text](Isolated.png "Title")
+![403bypass](https://github.com/bijan53c/bijan53c.github.io/blob/main/Articles/Attachments/403%20bypass%20scenarios.png)
 
 
 #403bypass 
