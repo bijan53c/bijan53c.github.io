@@ -1,4 +1,4 @@
-![[Concept on bypassing 403 pages.png]]
+![Concept on bypassing 403 pages](https://github.com/bijan53c/bijan53c.github.io/blob/main/Articles/Attachments/Concept%20on%20bypassing%20403%20pages.png)
 
 #403bypass
 > published June 15 ,2026
